@@ -1,0 +1,23 @@
+<h1 class="title" data-bind="title"></h1>
+
+<table data-bind-class="status | prepend 'status-'">
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Nede</th>
+      <th>Oppe</th>
+      <th>Tid</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  <tr data-foreach-row="rows">
+    <td data-bind="row.name"></td>
+    <td data-bind="row.down"></td>
+    <td data-bind="row.up"></td>
+    <td data-bind="row.down_time" class="right"></td>
+  </tr>
+</table>
+
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind="updatedAtMessage"></p>

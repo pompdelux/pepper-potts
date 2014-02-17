@@ -1,0 +1,5 @@
+*DS_STORE
+history.yml
+config.yml
+certs/*.p12
+certs/*.com
