@@ -2,4 +2,7 @@
 history.yml
 config.yml
 certs/*.p12
+certs/key
 certs/*.com
+log/*
+dashing.pid
