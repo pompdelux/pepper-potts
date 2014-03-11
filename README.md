@@ -9,6 +9,7 @@ Læs evt. [dokumentationen](http://shopify.github.io/dashing/) for dashing.
 Installation:
 
 ```sh
+$> sudo apt-get install ruby1.9.1-dev bundler
 $> sudo gem install dashing
 $> cd /sti/til/hvor-end
 $> git clone git@github.com:pompdelux/pepper-potts.git
