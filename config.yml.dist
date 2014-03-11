@@ -1,7 +1,9 @@
 # htaccess information
 :dashing:
-    :auth_user: ""
-    :auth_pwd:  ""
+    :auth_user:         ""
+    :auth_pwd:          ""
+    :auth_token:        ""
+    :default_dashboard: ""
 
 # access information for monitis.com integration
 :monitis:

@@ -1,9 +1,12 @@
 require 'dashing'
 
+$config = YAML.load File.open("config.yml")
+$config = $config[:dashing]
+
 configure do
-  set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :auth_token, $config[:auth_token]
   set :protection, :except => :frame_options
-  set :default_dashboard, 'pdl'
+  set :default_dashboard, $config[:default_dashboard]
 
   helpers do
     def protected!
@@ -16,13 +19,11 @@ configure do
     end
 
     def authorized?
-      config = YAML.load File.open("config.yml")
-      config = config[:dashing]
 
       @auth ||=  Rack::Auth::Basic::Request.new(request.env)
       @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [
-        config[:auth_user],
-        config[:auth_pwd]
+        $config[:auth_user],
+        $config[:auth_pwd]
       ]
     end
   end
