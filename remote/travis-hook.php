@@ -90,12 +90,12 @@ function notify_dev_team($data) {
     }
 
     if ($status == 'passed') {
-        $subject  = 'Build passed, please continue :·)';
+        $subject  = 'Build passed, please continue :-)';
         $icon     = '&#10004;';
         $bc_color = '#baecb7';
         $fg_color = '#32a32d';
     } else {
-        $subject  = 'Build FAILED !!! Stop everything and investigate... :·(';
+        $subject  = 'Build FAILED !!! Stop everything and investigate... :-(';
         $icon     = '&#10008;';
         $bc_color = '#ff7373';
         $fg_color = '#a60000';
