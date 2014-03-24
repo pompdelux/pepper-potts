@@ -34,7 +34,7 @@ switch ($filter) {
         ";
         break;
 
-    case 'L':
+    case 'LB':
         $max = 20;
         $gb_filter = "
             AND
@@ -45,7 +45,20 @@ switch ($filter) {
                         search_products_tags
                     WHERE
                         token LIKE 'LB\_%'
-                        OR
+                )
+        ";
+        break;
+
+    case 'LG':
+        $max = 20;
+        $gb_filter = "
+            AND
+                ol.products_id IN (
+                    SELECT
+                        products_id
+                    FROM
+                        search_products_tags
+                    WHERE
                         token LIKE 'LG\_%'
                 )
         ";
