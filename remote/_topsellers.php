@@ -93,7 +93,7 @@ $sql = "
     LIMIT
         {$max}
 ";
-error_log($sql);
+
 $res = mysqli_query($con, $sql);
 
 $data = [];
