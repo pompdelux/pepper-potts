@@ -121,7 +121,7 @@ function notify_dev_team($data) {
       <td style="padding:0px;border:0px;vertical-align:middle">
         <span style="vertical-align:middle;margin-left:3px">
             <strong><a href="https://magnum.travis-ci.com/'.$data['repository']['owner_name'].'/'.$data['repository']['name'].'" style="text-decoration:underline;color:#606060">'.$data['repository']['owner_name'].' / '.$data['repository']['name'].'</a></strong>
-            (<a href="'.$data['repository']['url'].'/tree/'.$data['branch'].'" style="text-decoration:underline;color:#606060">master</a>)
+            (<a href="'.$data['repository']['url'].'/tree/'.$data['branch'].'" style="text-decoration:underline;color:#606060">'.$data['branch'].'</a>)
         </span>
     </td>
     </tr>
@@ -147,13 +147,13 @@ function notify_dev_team($data) {
             <td class="profile-image" style="border:0px;height:20px;width:50px;padding:0px;border-left:1px solid #adadad;padding-top:20px;padding-bottom:5px;text-align:center">&nbsp;</td>
             <td class="grey" style="border:0px;color:#808080;padding:10px 20px 10px 0px;height:20px;padding-top:20px;padding-bottom:5px"><strong>'.$data['committer_name'].'</strong></td>
             <td align="right" class="grey" style="border:0px;color:#808080;padding:10px 20px 10px 0px;height:20px;border-right:1px solid #adadad;padding-top:20px;padding-bottom:5px">
-                <a href="'.$data['repository']['url'].'/commit/'.$data['commit'].'" style="text-decoration:none;font-weight:bold;color:#57769d">4091580</a>
+                <a href="'.$data['repository']['url'].'/commit/'.$data['commit'].'" style="text-decoration:none;font-weight:bold;color:#57769d">Commit</a> /
                 <a href="'.$data['compare_url'].'" style="text-decoration:none;font-weight:bold;color:#57769d">Changeset &#8702;</a>
             </td>
           </tr>
           <tr style="padding:0px;border:0px">
             <td style="border:0px;height:20px;width:50px;padding:0px;border-left:1px solid #adadad;border-bottom-left-radius:5px;border-bottom:1px solid #adadad">&nbsp;</td>
-            <td class="grey" colspan="2" style="border:0px;color:#808080;padding:10px 20px 10px 0px;height:20px;border-right:1px solid #adadad;padding-bottom:20px;padding-top:0px;border-bottom:1px solid #adadad;border-bottom-right-radius:5px">'.htmlentities($data['message']).'</td>
+            <td class="grey" colspan="2" style="border:0px;color:#808080;padding:10px 20px 10px 0px;height:20px;border-right:1px solid #adadad;padding-bottom:20px;padding-top:0px;border-bottom:1px solid #adadad;border-bottom-right-radius:5px">'.nl2br(htmlentities($data['message'])).'</td>
           </tr>
           </tbody>
       </table>
