@@ -42,6 +42,19 @@ function _plural($unit, $value) {
     return ' '.$unit.' ';
 }
 
+if (!function_exists('getallheaders')) {
+    function getallheaders() {
+       $headers = '';
+       foreach ($_SERVER as $name => $value) {
+           if (substr($name, 0, 5) == 'HTTP_') {
+               $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+           }
+       }
+
+       return $headers;
+    }
+}
+
 function notify_dashing($payload) {
     $board = 'master';
     if ('master' != $payload['branch']) {
@@ -173,7 +186,7 @@ function notify_dev_team($data) {
 }
 
 
-$headers = array_change_key_case(apache_request_headers(), CASE_UPPER);
+$headers = array_change_key_case(getallheaders(), CASE_UPPER);
 $secret  = hash('sha256', $headers['TRAVIS-REPO-SLUG'].'UA2TnLisELk6rr7prsvr');
 
 if (empty($headers['AUTHORIZATION']) || ($headers['AUTHORIZATION'] != $secret)) {
