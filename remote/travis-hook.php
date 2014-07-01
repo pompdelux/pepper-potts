@@ -97,7 +97,7 @@ function notify_dev_team($data) {
     }
 
     if ($data['branch'] == 'master') {
-        $recipients = 'pdl@bellcom.dk, lv@pompdelux.dk, hd@pompdelux.dk';
+        $recipients = 'pdl@bellcom.dk, cc@pompdelux.dk, hd@pompdelux.dk';
     } else {
         $recipients = 'pdl@bellcom.dk';
     }
