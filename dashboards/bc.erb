@@ -18,7 +18,7 @@ $(function() {
           <i class="icon-heart icon-background"></i>
         </li>
         <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
-            <div data-id="newrelic-chart" data-view="Iframe" data-url="https://rpm.newrelic.com/public/charts/7OrofT4y2TP" style="background-color: #fff"></div>
+          <div data-view="Graphite" data-image="http://pdlstats1.pompdelux.com/render/?width=340&height=260&_salt=1418895149.559&from=-90minutes&connectedLimit=&hideAxes=false&hideYAxis=false&hideGrid=false&target=alias(summarize(sumSeries(stats.counters.prod.order.*DK.count)%2C%2215min%22)%2C%22*DK%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.*DE.count)%2C%2215min%22)%2C%22*DE%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.COM.count)%2C%2215min%22)%2C%22*COM%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.*CH.count)%2C%2215min%22)%2C%22*CH%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.*FI.count)%2C%2215min%22)%2C%22*FI%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.*NL.count)%2C%2215min%22)%2C%22*NL%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.*SE.count)%2C%2215min%22)%2C%22*NO%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.*.count)%2C%2215min%22)%2C%22ALL%22)&target=alias(summarize(sumSeries(stats.counters.prod.order.*AT.count)%2C%2215min%22)%2C%22*AT%22)&title=Orders%20pr.%20Country" data-interval="60000"></div>
         </li>
 
         <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
@@ -42,7 +42,7 @@ $(function() {
             <div data-id="travis-other" data-view="Travis" data-unordered="true" data-title="Hanzo / *"></div>
         </li>
         <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
-            <div data-id="newrelic-browser-chart" data-view="Iframe" data-url="https://rpm.newrelic.com/public/charts/gTVzh1aptpN" style="background-color: #fff"></div>
+          <div data-view="Graphite" data-image="http://pdlstats1.pompdelux.com/render/?width=340&height=260&_salt=1418734848.266&from=-90minutes&title=Avg%20page%20response%20time%20-%20from%20server&lineMode=staircase&areaMode=first&yStep=&logBase=&yMax=&yMin=&target=alias(removeAboveValue(averageSeries(stats.timers.prod.buildtime.*.mean)%2C2000)%2C%22Avg%20response%20time%20%3C%202000ms%22)" data-interval="60000"></div>
         </li>
 
     </ul>
