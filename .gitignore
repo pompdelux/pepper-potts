@@ -6,3 +6,5 @@ certs/key
 certs/*.com
 log/*
 dashing.pid
+vendor/
+.bundle/
